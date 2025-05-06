@@ -1,0 +1,49 @@
+body{
+	background-color: #f2a7dd;
+}
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
+/* header-pjesa vjollce */
+
+#header{
+	background-color: #f2a7dd;
+	height: 600px;
+	padding-bottom: 100px;
+}
+header{
+	display: flex;
+	justify-content: space-around;
+	padding: 55px;
+}
+nav ul{
+	list-style: none;
+}
+nav li{
+	display: inline-block;
+	padding: 10px 16px;
+}
+nav a{
+	text-decoration: none;
+	color: white;
+}
+nav li.active{
+	background-color: #f593d9;
+	border-radius: 5px;
+}
+
+img{
+	width: 300px;
+    margin: 40px;
+}
+
+#zoom{
+	transform: scale(1.0);
+	transition: 0.3s ease-in-out;
+}
+#zoom:hover{
+	transform: scale(1.3);
+}
