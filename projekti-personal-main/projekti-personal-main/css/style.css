@@ -1,0 +1,305 @@
+ 
+/*Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Funnel+Display:wght@300..800&family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lilita+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+PhagsPa&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Teko:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/*Ubuntu*/
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Funnel+Display:wght@300..800&family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lilita+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+PhagsPa&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Teko:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/*Lilita One*/
+body{
+	background-color: #F5F5DC;
+	margin: 0;
+	padding: 0;
+}
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #C1C7B7;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	width: 100%; 
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+  }
+header .logo{
+	height: 100px;
+}
+header nav ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	list-style-type: none;
+
+}
+header nav ul li a{
+	text-decoration: none;
+	font-size: 25px;
+	font-family: Ubuntu;
+	color: #333333;
+	font-weight: bold;
+	transition: color 0.4s ease-in-out;
+}
+header nav ul li a:hover{
+	color: #695980;
+}
+header .buttons{
+	 display: flex;
+	 flex-direction: row;
+	 gap: 10px;
+	 justify-content: center;
+	 align-items: center;
+	 margin-right: 20px;
+}
+
+header .buttons button{
+	background-color: #D4A5A5;
+	width: 90px;
+	height: 50px;	
+	font-size: 16px;
+	font-family: Poppins;
+	border: 3px #333333 solid;
+	border-radius: 20px;
+	transition: 0.4s ease-in-out;
+}
+header .buttons button:hover{
+	background-color: #333333;
+	color: #D4A5A5;
+}
+.home{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #333333;
+}
+.home h1{
+	font-family: Ubuntu;word-spacing: 2px;
+	color: #C1C7B7;
+	font-size: 15px;
+}
+.title-box h1{
+	font-family: Poppins;
+	margin-left: 200px;
+	font-size: 40px;
+}
+.services{
+	margin: 0 200px;
+}
+.services .box1{
+	display: flex;
+}
+.box1 .text{
+	margin-top: -20px;
+	margin-left: 10px;
+	animation: padd linear;
+	animation-timeline: view();
+	animation-range: entry;
+}
+
+.box1 .text h3{
+	font-family: Poppins;
+	font-size: 25px;
+	color: #333333;
+}
+.box1 .text p{
+	font-family: Ubuntu;
+	font-size: 17px;
+	color: #695980;
+}
+footer{
+	padding: 0 200px;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: start;
+	gap: 180px;
+	background-color: #C1C7B7;
+}
+footer .section .logo{
+	height: 120px;
+}
+footer .section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+footer .section h4, p, a{
+	text-decoration: none;
+	font-family: Ubuntu;
+	font-size: 20px;
+	color: #333333;
+	font-weight: 500;
+}
+footer .section .icons{
+	display: flex;
+	flex-direction: row;
+	font-size: 50px;
+	gap: 10px;
+	color: #333333;
+}
+.slider-main{
+	background-color: #695980;
+	padding: 40px 0;
+	font-family: Ubuntu;
+	text-align: center;
+	color: #C1C7B7;
+	margin: 40px 0;
+	animation: padd linear;
+	animation-timeline: view();
+	animation-range: entry;
+}
+.slider-container {
+	
+	position: relative;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 70px	;
+	margin-bottom: 120px;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	
+  }
+  
+  .slider {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	height: 350px;  
+  }
+  
+  .slide {
+	min-width: 100%;
+  }
+  
+  .slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  .slider-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.414);
+	border: none;
+	color: #333333;
+	font-size: 1.5rem;
+	padding: 10px 12px;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: all 0.3s;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .slider-btn:hover {
+	background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .prev-btn {
+	left: 20px;
+  }
+  
+  .next-btn {
+	right: 20px;
+  }
+  
+  .dots-container {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+  }
+  
+  .dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+  }
+  
+  .dot.active {
+	background: white;
+  }
+  .text.first{
+	margin-top: 200px;
+  }
+  .products{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+  }
+  .products .div-pr-1{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+	margin-bottom: 100px;
+  }
+  .products .div-pr-1 .product{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: #C1C7B7 5px solid;
+	border-radius: 20px;
+	height: 350px;
+	padding: 0 20px;
+	background-color: #695980;
+	z-index: -10;
+	width: 200px;    
+  }
+  .products .div-pr-1 .product .product-image img{
+	height: 200px;
+	border-radius: 20px;
+	border: #D4A5A5 5px solid;
+	z-index: 10;
+  }
+  .products .div-pr-1 .product .product-text h2{
+	font-family: Lilita One;
+	font-size: 40px;
+	color: #D4A5A5;
+	letter-spacing: 4px;
+}
+.products .div-pr-1 .product .flower{
+	height: 200px;	
+    position: relative;
+	margin-top: -120px;
+	z-index: -1;
+	opacity: 0.7;
+}
+.products h1{
+	font-family: Ubuntu;
+	color: #D4A5A5;
+	font-size: 2.7em;
+}
+ .div-pr-1.bl{
+	width: 100%;
+	background-color: #D4A5A5;
+	z-index: 10;
+	margin-top: 10px;
+height: 70vh;	
+padding: 30px 0px;
+ }
+ .products .bg{
+	color: #695980;
+	width: 100%;
+	text-align: center;
+	height: 100%;
+	padding: 30px 0;
+   
+	background-color: #D4A5A5	;
+	margin-bottom: -10px;
+ }
