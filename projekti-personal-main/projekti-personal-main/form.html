@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floral Auth Form</title>
+    <style>
+        :root {
+            --petal-pink: #ffb6c1;
+            --leaf-green: #3cb371;
+            --stem-brown: #8b4513;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: url('https://images.unsplash.com/photo-1526397751294-331021109fbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .auth-container {
+            display: flex;
+            width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .flower-decoration {
+            flex: 1;
+            background: linear-gradient(135deg, var(--petal-pink), var(--leaf-green));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .flower-decoration::before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: url('https://cdn-icons-png.flaticon.com/512/11807/11807903.png') no-repeat;
+            background-size: contain;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.7;
+        }
+        
+        .form-section {
+            flex: 1;
+            padding: 40px;
+        }
+        
+        .form-toggle {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .form-toggle button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: none;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+        
+        .form-toggle button.active {
+            color: var(--leaf-green);
+            border-bottom: 3px solid var(--leaf-green);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            border-color: var(--leaf-green);
+            box-shadow: 0 0 0 3px rgba(60, 179, 113, 0.2);
+            outline: none;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--leaf-green);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: #2da360;
+            transform: translateY(-2px);
+        }
+        
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+        
+        .form-footer a {
+            color: var(--leaf-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Hidden form */
+        .form {
+            display: none;
+        }
+        
+        .form.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .auth-container {
+                flex-direction: column;
+                width: 90%;
+            }
+            
+            .flower-decoration {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="flower-decoration"></div>
+        
+        <div class="form-section">
+            <div class="form-toggle">
+                <button class="active" onclick="showForm('login')">Login</button>
+                <button onclick="showForm('signup')">Sign Up</button>
+            </div>
+            
+            <form id="login-form" class="form active">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Login</button>
+                
+                <div class="form-footer">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </form>
+            
+            <form id="signup-form" class="form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" placeholder="Confirm your password" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create Account</button>
+                
+                <div class="form-footer">
+                    Already have an account? <a href="#" onclick="showForm('login')">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showForm(formType) {
+            // Hide all forms
+            document.querySelectorAll('.form').forEach(form => {
+                form.classList.remove('active');
+            });
+            
+            // Show selected form
+            document.getElementById(`${formType}-form`).classList.add('active');
+            
+            // Update active button
+            document.querySelectorAll('.form-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+        
+        // Form submission with redirection
+        document.getElementById('login-form').onsubmit = function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        };
+        
+        document.getElementById('signup-form').onsubmit = function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        };
+    </script>
+</body>
+</html>
