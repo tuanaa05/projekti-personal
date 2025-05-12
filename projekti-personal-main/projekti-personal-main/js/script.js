@@ -43,3 +43,5 @@ document.addEventListener('DOMContentLoaded', function() {
       updateSlider();
     }, 5000);
   });
+
+
