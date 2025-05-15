@@ -375,7 +375,7 @@ padding: 30px 0px;
     .team-section h2 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      color: #7a4c39;
+      color:#F88DAD ;
     }
 
     .team-section p {
@@ -455,4 +455,12 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.gallery{
+	margin-left: 25px;
+}
+
+.gallery1{
+	margin-left: 555px;
 }
